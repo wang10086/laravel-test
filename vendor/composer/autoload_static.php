@@ -15,10 +15,10 @@ class ComposerStaticInit6473e604fdcb83e14610a6fcc41fa3ae
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        '4e8671d7be9056dcd04ddd9e8e15f9cc' => __DIR__ . '/..' . '/encore/laravel-admin/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
-        '4e8671d7be9056dcd04ddd9e8e15f9cc' => __DIR__ . '/..' . '/encore/laravel-admin/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -102,6 +102,7 @@ class ComposerStaticInit6473e604fdcb83e14610a6fcc41fa3ae
         ),
         'E' => 
         array (
+            'Encore\\Admin\\LockScreen\\' => 24,
             'Encore\\Admin\\' => 13,
             'Egulias\\EmailValidator\\' => 23,
         ),
@@ -274,6 +275,10 @@ class ComposerStaticInit6473e604fdcb83e14610a6fcc41fa3ae
         'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
+        ),
+        'Encore\\Admin\\LockScreen\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/lock-screen/src',
         ),
         'Encore\\Admin\\' => 
         array (
@@ -954,6 +959,10 @@ class ComposerStaticInit6473e604fdcb83e14610a6fcc41fa3ae
         'Encore\\Admin\\Layout\\Column' => __DIR__ . '/..' . '/encore/laravel-admin/src/Layout/Column.php',
         'Encore\\Admin\\Layout\\Content' => __DIR__ . '/..' . '/encore/laravel-admin/src/Layout/Content.php',
         'Encore\\Admin\\Layout\\Row' => __DIR__ . '/..' . '/encore/laravel-admin/src/Layout/Row.php',
+        'Encore\\Admin\\LockScreen\\Http\\Controllers\\LockScreenController' => __DIR__ . '/..' . '/laravel-admin-ext/lock-screen/src/Http/Controllers/LockScreenController.php',
+        'Encore\\Admin\\LockScreen\\Http\\Middleware\\LockScreen' => __DIR__ . '/..' . '/laravel-admin-ext/lock-screen/src/Http/Middleware/LockScreen.php',
+        'Encore\\Admin\\LockScreen\\LockScreen' => __DIR__ . '/..' . '/laravel-admin-ext/lock-screen/src/LockScreen.php',
+        'Encore\\Admin\\LockScreen\\LockScreenServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/lock-screen/src/LockScreenServiceProvider.php',
         'Encore\\Admin\\Middleware\\Authenticate' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/Authenticate.php',
         'Encore\\Admin\\Middleware\\Bootstrap' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/Bootstrap.php',
         'Encore\\Admin\\Middleware\\LogOperation' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/LogOperation.php',
