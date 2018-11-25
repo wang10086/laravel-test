@@ -42,6 +42,7 @@ return array(
     'Illuminate\\' => array($vendorDir . '/laravel/framework/src/Illuminate'),
     'Fideloper\\Proxy\\' => array($vendorDir . '/fideloper/proxy/src'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
+    'Encore\\Admin\\MediaPlayer\\' => array($vendorDir . '/laravel-admin-ext/media-player/src'),
     'Encore\\Admin\\LockScreen\\' => array($vendorDir . '/laravel-admin-ext/lock-screen/src'),
     'Encore\\Admin\\' => array($vendorDir . '/encore/laravel-admin/src'),
     'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/EmailValidator'),

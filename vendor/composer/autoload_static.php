@@ -102,6 +102,7 @@ class ComposerStaticInit6473e604fdcb83e14610a6fcc41fa3ae
         ),
         'E' => 
         array (
+            'Encore\\Admin\\MediaPlayer\\' => 25,
             'Encore\\Admin\\LockScreen\\' => 24,
             'Encore\\Admin\\' => 13,
             'Egulias\\EmailValidator\\' => 23,
@@ -275,6 +276,10 @@ class ComposerStaticInit6473e604fdcb83e14610a6fcc41fa3ae
         'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
+        ),
+        'Encore\\Admin\\MediaPlayer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/media-player/src',
         ),
         'Encore\\Admin\\LockScreen\\' => 
         array (
@@ -963,6 +968,10 @@ class ComposerStaticInit6473e604fdcb83e14610a6fcc41fa3ae
         'Encore\\Admin\\LockScreen\\Http\\Middleware\\LockScreen' => __DIR__ . '/..' . '/laravel-admin-ext/lock-screen/src/Http/Middleware/LockScreen.php',
         'Encore\\Admin\\LockScreen\\LockScreen' => __DIR__ . '/..' . '/laravel-admin-ext/lock-screen/src/LockScreen.php',
         'Encore\\Admin\\LockScreen\\LockScreenServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/lock-screen/src/LockScreenServiceProvider.php',
+        'Encore\\Admin\\MediaPlayer\\MediaPlayer' => __DIR__ . '/..' . '/laravel-admin-ext/media-player/src/MediaPlayer.php',
+        'Encore\\Admin\\MediaPlayer\\MediaPlayerServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/media-player/src/MediaPlayerServiceProvider.php',
+        'Encore\\Admin\\MediaPlayer\\PlayerColumn' => __DIR__ . '/..' . '/laravel-admin-ext/media-player/src/PlayerColumn.php',
+        'Encore\\Admin\\MediaPlayer\\PlayerField' => __DIR__ . '/..' . '/laravel-admin-ext/media-player/src/PlayerField.php',
         'Encore\\Admin\\Middleware\\Authenticate' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/Authenticate.php',
         'Encore\\Admin\\Middleware\\Bootstrap' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/Bootstrap.php',
         'Encore\\Admin\\Middleware\\LogOperation' => __DIR__ . '/..' . '/encore/laravel-admin/src/Middleware/LogOperation.php',
