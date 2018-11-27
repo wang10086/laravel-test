@@ -17,7 +17,7 @@ class AdminTableSeeder extends Seeder
         		'password'=>bcrypt('123456'),
         	],
         	[
-        		'username'=>'songjiang',
+        		'username'=>'admin',
         		'password'=>bcrypt('123456'),
         	]
 
