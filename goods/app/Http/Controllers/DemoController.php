@@ -17,6 +17,7 @@ class DemoController extends Controller
     	//echo $a;
     	//DB::connection()->enableQueryLog();//开启sql语句日志记录
 		$data = DB::table('goods')->where('id','1')->get();
+        var_dump($data);
 		//$query = DB::getQueryLog();//获取执行的sql语句
 		//print_r($query);
 
