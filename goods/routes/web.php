@@ -35,6 +35,7 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
 		Route::match(['post','get'],'goods/add','GoodsController@add');
 		//商品列表的路由
 		Route::get('goods/index','GoodsController@index');
+		Route::get('goods/add','GoodsController@add');
 		//商品修改的路由
 		Route::match(['get','post'],'goods/update/{goods}','GoodsController@update');
 		//商品删除的路由

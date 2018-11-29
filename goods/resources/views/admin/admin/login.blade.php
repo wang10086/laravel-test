@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="{{asset('admins')}}/style/css/ch-ui.admin.css">
+	<link rel="stylesheet" href="{{asset('admins')}}/style/css/style.css">
 	<link rel="stylesheet" href="{{asset('admins')}}/style/font/css/font-awesome.min.css">
 	<script type="text/javascript" src="/js/jquery.js"></script>
 </head>

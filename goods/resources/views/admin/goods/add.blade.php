@@ -51,9 +51,9 @@
                         <td>
                             <select name="cat_id">
                                 <option value="">==请选择==</option>
-                                @foreach($category as $k=>$v)
+                               {{-- @foreach($category as $k=>$v)
                                 <option value="{{$k}}">{{$v}}</option>
-                                @endforeach
+                                @endforeach--}}
                             </select>
                         </td>
                     </tr>
