@@ -1,1 +1,5 @@
 .login_box{text-align: center;  border-radius: 20px;  width: 300px;  height: 350px;  position: absolute;  left: 50%;  top: 50%;  transform: translate(-50%,-50%);  }
+
+.uploadify{display:inline-block;}
+.uploadify-button{border:none; border-radius:5px; margin-top:8px;}
+table.add_tab tr td span.uploadify-button-text{color: #FFF; margin:0;}

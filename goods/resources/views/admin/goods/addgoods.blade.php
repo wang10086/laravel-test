@@ -35,7 +35,7 @@
         </div>
     </div>
     <!--结果集标题与导航组件 结束-->
-
+    
     <div class="result_wrap">
     @if(count($errors)>0)
         @foreach($errors->all() as $error)
@@ -51,9 +51,9 @@
                         <td>
                             <select name="cat_id">
                                 <option value="">==请选择==</option>
-                                @foreach($category as $k=>$v)
+                               {{-- @foreach($category as $k=>$v)
                                 <option value="{{$k}}">{{$v}}</option>
-                                @endforeach
+                                @endforeach--}}
                             </select>
                         </td>
                     </tr>
@@ -76,13 +76,13 @@
                         <td>
                         <input type="text" size="100" readonly="readonly" name="goods_thumb">
                         <input id="file_upload" name="file_upload" type="file" multiple="true"></td>
-                    </tr>
+                    </tr> 
                     <tr>
                         <th></th>
                         <td>
                             <img src='' id="showimg" />
                         </td>
-                    </tr>
+                    </tr>              
                     <tr>
                         <th>详细内容：</th>
                         <td>
@@ -104,6 +104,7 @@
 
 </body>
 </html>
+
 <script type="text/javascript">
     $(function() {
             $('#file_upload').uploadify({

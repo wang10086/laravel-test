@@ -9,7 +9,7 @@
 	<!--面包屑导航 开始-->
 	<div class="crumb_warp">
 		<!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
-		<i class="fa fa-home"></i> <a href="#">首页</a> &raquo; <a href="#">商品管理</a> &raquo; 添加商品
+		<i class="fa fa-home"></i> <a href="javascript:;">首页</a> &raquo; <a href="javascript:;">商品管理</a> &raquo; 添加商品
 	</div>
 	<!--面包屑导航 结束-->
 	
@@ -20,9 +20,9 @@
         </div>
         <div class="result_content">
             <div class="short_wrap">
-                <a href="#"><i class="fa fa-plus"></i>新增文章</a>
-                <a href="#"><i class="fa fa-recycle"></i>批量删除</a>
-                <a href="#"><i class="fa fa-refresh"></i>更新排序</a>
+                <a href="javascript:;"><i class="fa fa-plus"></i>新增文章</a>
+                <a href="javascript:;"><i class="fa fa-recycle"></i>批量删除</a>
+                <a href="javascript:;"><i class="fa fa-refresh"></i>更新排序</a>
             </div>
         </div>
     </div>
@@ -71,10 +71,10 @@
         <div class="result_content">
             <ul>
                 <li>
-                    <label>官方交流网站：</label><span><a href="#">http://bbs.abc.com</a></span>
+                    <label>官方交流网站：</label><span><a href="javascript:;">http://bbs.abc.com</a></span>
                 </li>
                 <li>
-                    <label>官方交流QQ群：</label><span><a href="#"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png"></a></span>
+                    <label>官方交流QQ群：</label><span><a href="javascript:;"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png"></a></span>
                 </li>
             </ul>
         </div>

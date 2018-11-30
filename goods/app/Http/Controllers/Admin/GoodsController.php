@@ -27,7 +27,7 @@ class GoodsController extends Controller
     			//$category = Category::pluck($value,$key);
     			//组建成一个例如[$key1=>$value1,'$key2'=>$value2]样式的一维数组
     			$category = Category::pluck('cat_name','id');
-    			//return  view('admin.goods.add',compact('category'));
+    			return  view('admin.goods.add',compact('category'));
     			return  view('admin.goods.add');
     	}else if($request->isMethod('post')){
     		//完成添加商品的操作
