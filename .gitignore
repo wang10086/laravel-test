@@ -1,2 +1,6 @@
-/.env
-/storage
+/goods/.env
+.gitignore
+
+/laravel-admin/.env
+/laravel-admin/.gitignore
+/laravel-admin/storage/framework/cache/
