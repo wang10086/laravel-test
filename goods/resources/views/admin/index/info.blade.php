@@ -36,28 +36,43 @@
         <div class="result_content">
             <ul>
                 <li>
-                    <label>操作系统</label><span>WINNT</span>
+                    <label>操作系统</label><span>{{$envs['Uname']}}</span>
                 </li>
                 <li>
-                    <label>运行环境</label><span>Apache/2.2.21 (Win64) PHP/5.3.10</span>
+                    <label>PHP version</label><span>{{$envs['PHP version']}}</span>
                 </li>
                 <li>
-                    <label>PHP运行方式</label><span>apache2handler</span>
+                    <label>Laravel version</label><span>{{$envs['Laravel version']}}</span>
                 </li>
                 <li>
-                    <label>宝马设计-版本</label><span>v-0.1</span>
+                    <label>Server</label><span>{{$envs['Server']}}</span>
                 </li>
                 <li>
-                    <label>上传附件限制</label><span>8M</span>
+                    <label>Cache driver</label><span>{{$envs['Cache driver']}}</span>
                 </li>
                 <li>
-                    <label>北京时间</label><span>2016年10月24日 10:24:24</span>
+                    <label>Session driver</label><span>{{$envs['Session driver']}}</span>
                 </li>
                 <li>
-                    <label>服务器域名/IP</label><span>localhost [ 127.0.0.1 ]</span>
+                    <label>Session driver</label><span>{{$envs['Session driver']}}</span>
                 </li>
                 <li>
-                    <label>Host</label><span>127.0.0.1</span>
+                    <label>Timezone</label><span>{{$envs['Timezone']}}</span>
+                </li>
+                <li>
+                    <label>服务器域名/IP</label><span>{{$envs['Locale']}}</span>
+                </li>
+                <li>
+                    <label>北京时间</label><span>{{$envs['time']}}</span>
+                </li>
+                <li>
+                    <label>Env</label><span>{{$envs['Env']}}</span>
+                </li>
+                <li>
+                    <label>URL</label><span>{{$envs['URL']}}</span>
+                </li>
+                <li>
+                    <label>CGI</label><span>{{$envs['CGI']}}</span>
                 </li>
             </ul>
         </div>

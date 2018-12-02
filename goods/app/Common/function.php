@@ -14,3 +14,4 @@ function getlastsql(){
     $query = end($sql);
     return $query;
 }
+

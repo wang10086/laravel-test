@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="{{asset('admins')}}/style/font/css/font-awesome.min.css">
     <script type="text/javascript" src="/admins/style/js/jquery.js"></script>
     <script type="text/javascript" src="{{asset('admins')}}/style/js/ch-ui.admin.js"></script>
+    <!--[if lt IE 9]-->
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!-- <![endif]--> -->
 </head>
 <body>
 <!--头部 开始-->
