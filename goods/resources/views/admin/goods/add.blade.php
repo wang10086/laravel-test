@@ -16,21 +16,20 @@
 <body>
     <!--面包屑导航 开始-->
     <div class="crumb_warp">
-        <!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
-        <i class="fa fa-home"></i> <a href="#">首页</a> &raquo; <a href="#">商品管理</a> &raquo; 添加商品
+        <i class="fa fa-home"></i> <a href="javascript:;">{{$nave['nave1']}}</a> &raquo; <a href="{{url('admin/goods/index')}}">{{$nave['nave2']}}</a> &raquo;{{$nave['nave3']}}
     </div>
     <!--面包屑导航 结束-->
 
 	<!--结果集标题与导航组件 开始-->
 	<div class="result_wrap">
         <div class="result_title">
-            <h3>快捷操作</h3>
+            <h3>新增商品</h3>
         </div>
         <div class="result_content">
             <div class="short_wrap">
-                <a href="#"><i class="fa fa-plus"></i>新增文章</a>
+                {{--<a href="#"><i class="fa fa-plus"></i>新增文章</a>
                 <a href="#"><i class="fa fa-recycle"></i>批量删除</a>
-                <a href="#"><i class="fa fa-refresh"></i>更新排序</a>
+                <a href="#"><i class="fa fa-refresh"></i>更新排序</a>--}}
             </div>
         </div>
     </div>

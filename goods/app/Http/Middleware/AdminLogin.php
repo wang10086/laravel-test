@@ -15,7 +15,7 @@ class AdminLogin
      */
     public function handle($request, Closure $next)
     {
-        
+
         if(!Auth::guard('admin')->check()){
             //未登录状态，直接跳转到登录页面
             return redirect('admin/login');

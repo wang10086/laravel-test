@@ -10,25 +10,35 @@ use App\Goods;
 use App\Category;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 class GoodsController extends Controller
 {
     //商品列表
     public function index(){
+        $nave   = [
+            'nave1' => '首页',
+            'nave2' => '商品管理',
+            'nave3' => '商品列表',
+        ];
     	//取出商品数据
     	$data =  Goods::with('category')->get();
     	//使用with('category')表示把所属的栏目名称一块取出来。
-    	return view('admin.goods.index',compact('data'));
+    	return view('admin.goods.index',compact('data','nave'));
     }
     //添加商品的
     public function add(Request $request){
     	if($request->isMethod('get')){
+            $nave   = [
+                'nave1' => '首页',
+                'nave2' => '商品管理',
+                'nave3' => '添加商品',
+            ];
     			//展示添加商品的表单
     			//取出栏目数据
     			//$category = Category::pluck($value,$key);
     			//组建成一个例如[$key1=>$value1,'$key2'=>$value2]样式的一维数组
     			$category = Category::pluck('cat_name','id');
-    			return  view('admin.goods.add',compact('category'));
-    			return  view('admin.goods.add');
+    			return  view('admin.goods.add',compact('category','nave'));
     	}else if($request->isMethod('post')){
     		//完成添加商品的操作
     		//定义一个验证规则

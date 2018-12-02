@@ -13,6 +13,11 @@ class IndexController extends Controller
     	return view('admin.index.index');
     }
     public function info(){
-    	return view('admin.index.info');
+        $nave   = [
+            'nave1' => '首页',
+            'nave2' => '基本信息',
+            'nave3' => '详情',
+        ];
+    	return view('admin.index.info',compact('nave'));
     }
 }
