@@ -12,6 +12,7 @@
 */
 //Route::get('demo','Admin\AdminController@demo');
 Route::get('demo','DemoController@demo');
+Route::get('getArticle','DemoController@getarticle');
 
 Route::get('setcache','DemoController@setcache');
 Route::get('getcache','DemoController@getcache');

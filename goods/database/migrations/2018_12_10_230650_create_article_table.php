@@ -18,12 +18,13 @@ class CreateArticleTable extends Migration
             $table->increments('id');
             $table->string('title',100)->notNull()->comment('文章标题');
             $table->string('content',1024)->notNull()->default('testDefalueContent')->comment('文章内容');
+            $table->integer('author_id')->notNull()->default(0)->comment('作者id');
         });
         //DB::statement("ALTER TABLE 'article' comment'文章表'");//表注释
         Schema::create('author',function (Blueprint $table){
             $table->increments('id');
             $table->string('name',22)->notNull()->defaule('我是默认名字')->comment('作者名字');
-            $table->integer('article_id')->notNull()->comment('文章id');
+            $table->string('sex',10)->default(null)->comment('作者性别');
         });
         //Db:statement("ALTER TABLE 'author' comment'作者表'");
     }

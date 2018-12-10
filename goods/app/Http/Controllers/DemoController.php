@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Author;
+use App\Article;
 
 use App\Http\Requests;
 use Cache;
@@ -51,5 +53,10 @@ class DemoController extends Controller
     }
     public function delcache(){
     	Cache::forget('username');
+    }
+
+    public function getarticle(){
+        $data = Author::article();
+        var_dump($data);
     }
 }
