@@ -56,7 +56,11 @@ class DemoController extends Controller
     }
 
     public function getarticle(){
-        $data = Author::article();
-        var_dump($data);
+        $data = article::find(1);
+        $data->title='aaaatestphp';
+        $a  = $data->save();
+        var_dump($a);
+
+        //var_dump($data);
     }
 }
