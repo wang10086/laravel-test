@@ -40,6 +40,8 @@ class GoodsController extends Controller
     			$category = Category::pluck('cat_name','id');
     			return  view('admin.goods.add',compact('category','nave'));
     	}else if($request->isMethod('post')){
+            echo "<pre>";
+            var_dump($_POST);die;
     		//完成添加商品的操作
     		//定义一个验证规则
     		$rules = [

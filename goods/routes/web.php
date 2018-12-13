@@ -43,6 +43,9 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
 		Route::post('goods/del','GoodsController@del');
 		//完成上传图片
 		Route::post('goods/upimg','GoodsController@upimg');
+
+        //文章
+        Route::get('article/index','ArticleController@index');
 	});
 });
 Route::get('/', function () {

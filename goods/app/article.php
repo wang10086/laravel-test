@@ -12,6 +12,6 @@ class Article extends Model
     protected $fillable = ['title','content','author_id'];
 
     public function author(){
-        return $this->hasOne('App/author','id','author_id');
+        return $this->hasOne('App\author','id','author_id');
     }
 }

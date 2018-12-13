@@ -40,6 +40,7 @@
                 <li><a href="{{url('admin/goods/index')}}" target="main"><i class="fa fa-fw fa-list-ul"></i>列表页</a></li>
                 <li><a href="{{url('home/index')}}" target="main"><i class="fa fa-fw fa-list-alt"></i>tab页</a></li>
                 <li><a href="img.html" target="main"><i class="fa fa-fw fa-image"></i>图片列表</a></li>
+                <li><a href="{{url('admin/article/index')}}" target="main"><i class="fa fa-book"></i>文章列表</a></li>
             </ul>
         </li>
         <li>
