@@ -38,7 +38,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -120,9 +120,13 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'single'),
+    //'log' => env('APP_LOG', 'single'),
+    'log' => env('APP_LOG', 'daily'),
 
-    'log_level' => env('APP_LOG_LEVEL', 'debug'),
+    //设置报错级别（避免生成过多日志）
+    //可以使用的值还有 debug, info, notice, warning, error, critical, alert, emergency
+    'log_level' => env('APP_LOG_LEVEL', 'error'),
+
 
     /*
     |--------------------------------------------------------------------------
