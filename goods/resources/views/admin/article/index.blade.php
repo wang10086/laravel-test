@@ -58,30 +58,31 @@
                         <th class="tc" width="5%"><input type="checkbox" name=""></th>
                         <th class="tc">排序</th>
                         <th class="tc">ID</th>
-                        <th>商品名称</th>
-                        <th>栏目名称</th>
-                        <th>商品价格</th>
-                        <th>商品描述</th>
-                        <th>商品图片</th>
+                        <th>文章标题</th>
+                        <th>文章内容</th>
+                        <th>作者ID</th>
+                        <th>作者姓名</th>
+                        <th>作者性别</th>
                         <th>操作</th>
                     </tr>
-                    @foreach($data as $v)
+                    @foreach($lists as $v)
                     <tr>
                         <td class="tc"><input type="checkbox" name="id[]" value="59"></td>
                         <td class="tc">
                             <input type="text" name="ord[]" value="0">
                         </td>
                         <td class="tc">{{$v->id}}</td>
+                        <td class="tc">{{$v->title}}</td>
                         <td>
-                            <a href="#">{{$v->goods_name}}</a>
+                            <a href="#">{{$v->content}}</a>
                         </td>
-                        <td>{{$v->category->cat_name}}</td>
-                        <td>{{$v->goods_price}}</td>
-                        <td>{{$v->goods_desc}}</td>
-                        <td><img width="150" src="{{$v->goods_thumb}}"/></td>
+                        {{--<td>{{$v->category->author_id}}</td>--}}
+                        <td>{{$v->author_id}}</td>
+                        <td>{{$v->author->name}}</td>
+                        <td>{{$v->author->sex}}</td>
                         <td>
-                            <a href="{{url('admin/goods/update/'.$v->id)}}">修改</a>
-                            <a href="javascript:" onclick="delGoods('{{$v->id}}',this)">删除</a>
+                            <a href="{{url('admin/article/update/'.$v->id)}}">修改</a>
+                            <a href="javascript:" onclick="delarticle('{{$v->id}}',this)">删除</a>
                         </td>
                     </tr>
                     @endforeach
