@@ -14,8 +14,8 @@ class ArticleController extends Controller
     public function index(){
         $nave   = [
             'nave1' => '首页',
-            'nave2' => '商品管理',
-            'nave3' => '商品列表',
+            'nave2' => '文章管理',
+            'nave3' => '文章列表',
         ];
         $lists      = Article::with('author')->get();
         //$lists      = DB::table('article')->get();
@@ -23,6 +23,11 @@ class ArticleController extends Controller
         //echo '<pre>';
         //var_dump($lists);
         return view('admin.article.index',compact('lists','nave'));
+    }
+
+    public function add(){
+
+        return view('admin/article.addArticle');
     }
 
 }
