@@ -25,9 +25,20 @@ class ArticleController extends Controller
         return view('admin.article.index',compact('lists','nave'));
     }
 
-    public function add(){
+    public function add(Request $request){
+        if($request->isMethod('get')){
+            $where          = array();
+            $where['sex']   = '女';
+            $authors        = Author::where($where)->pluck('name','id');
+            return view('admin/article.addArticle',compact('authors'));
+        }elseif ($request->isMethod('post')){
+            var_dump($_POST);die;
+        }
+    }
 
-        return view('admin/article.addArticle');
+    public function del(Request $request){
+        $id             = $request->input('id');
+        var_dump($id);die;
     }
 
 }

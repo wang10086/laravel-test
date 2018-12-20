@@ -47,6 +47,7 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
         //文章
         Route::get('article/index','ArticleController@index');
         Route::match(['get','post'],'article/add','ArticleController@add');
+        Route::post('article/del','ArticleController@del');
 	});
 });
 Route::get('/', function () {
