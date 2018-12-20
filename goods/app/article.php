@@ -3,12 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\BaseModel;
 
-class Article extends Model
+class Article extends BaseModel
 {
     //
     protected $table    = 'article';
-    public $timestamps  = false;
+    public $timestamps  = true;
     protected $fillable = ['title','content','author_id'];
 
     public function author(){
