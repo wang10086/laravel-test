@@ -82,7 +82,7 @@
                         <td>{{$v->author->sex}}</td>
                         <td>
                             <a href="{{url('admin/article/update/'.$v->id)}}">修改</a>
-                            <a href="javascript:" onclick="delarticle('{{$v->id}}',this)">删除</a>
+                            <a href="javascript:" onclick="delArticle('{{$v->id}}',this)">删除</a>
                         </td>
                     </tr>
                     @endforeach
@@ -103,13 +103,13 @@
     </form>
     <!--搜索结果页面 列表 结束-->
     <script type="text/javascript">
-        function delGoods(id,o){
+        function delArticle(id,o){
             //引入弹出层；
             layer.confirm('你真的要删除我吗？',{
                 btn:['确定','取消']
             },function(){
                 //选择的确定，使用ajax的方式来删除
-                $.post("{{url('admin/goods/del')}}",{id:id,'_token':'{{csrf_token()}}'},function(msg){
+                $.post("{{url('admin/article/del')}}",{id:id,'_token':'{{csrf_token()}}'},function(msg){
                     //判断msg返回值了，如果返回
                     if(msg.info==1){
                         //删除成功
@@ -122,7 +122,7 @@
                     }
                 });
             },function(){
-                layer.msg('呵呵',{icon:5,time:2000});
+                layer.msg('已取消',{icon:5,time:2000});
             });
 
         }
