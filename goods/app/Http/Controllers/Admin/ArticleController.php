@@ -69,7 +69,19 @@ class ArticleController extends Controller
         }
     }
 
+    public function update(Request $request,Article $article){
+        if ($request->method('get')){
+            $author     = Author::pluck('name','id');
+            return view('admin.article.update',compact('article','author'));
+        }else if ($request->method('post')){
+
+            var_dump('aaaaaa');die;
+
+        }
+    }
+
     public function del(Request $request){
+
         $id             = $request->input('id');
         var_dump($id);die;
     }
