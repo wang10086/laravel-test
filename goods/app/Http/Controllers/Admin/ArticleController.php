@@ -74,8 +74,40 @@ class ArticleController extends Controller
             $author     = Author::pluck('name','id');
             return view('admin.article.update',compact('article','author'));
         }else if ($request->method('post')){
+//定义验证规则
+            $rules  = [
+                'title'     =>'required|unique:article,title'.$article->id,
+                'content'   =>'required',
+                'author_id' =>'required|integer',
+                'price'     =>'required|integer'
+            ];
 
+            //定义一个错误提示
+            $msgs   =[
+                'title.required'    =>'文章名称不能为空',
+                'title.unique'      =>'文章名称已存在',
+                'content.required'  =>'文章内容不能为空',
+                'author_id.required'=>'作者不能为空',
+                'price.required'    =>'价格信息不能为空',
+                'price.integer'     =>'价格必须是整数'
+            ];
             var_dump('aaaaaa');die;
+
+            //使用Validator类验证
+            $validator  = Validator::make($request->all(),$rules,$msgs);
+            if ($validator->passes()){
+                $res    = Article::updated($request->input());
+                if ($res){
+                    return redirect('admin/article/index');
+                }else{
+                    //添加失败
+                    //return redirect('admin/article/add');
+                    return back()->withErrors(['error'=>'添加失败']);
+                    //使用withErrors把错误信息，添加到$errors对象里面了
+                }
+            }else{
+                return back()->withErrors($validator);
+            }
 
         }
     }
