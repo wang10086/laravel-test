@@ -50,7 +50,7 @@ class DemoController extends Controller
      */
     public function showCaptcha()
     {
-        return view('home/demo/show_captcha');
+        return view('home/demo/showCaptcha');
     }
 
     /**
