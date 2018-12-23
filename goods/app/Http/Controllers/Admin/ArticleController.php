@@ -74,7 +74,8 @@ class ArticleController extends Controller
             $author     = Author::pluck('name','id');
             return view('admin.article.update',compact('article','author'));
         }else if ($request->method('post')){
-//定义验证规则
+
+            //定义验证规则
             $rules  = [
                 'title'     =>'required|unique:article,title'.$article->id,
                 'content'   =>'required',

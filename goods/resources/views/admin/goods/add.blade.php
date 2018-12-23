@@ -109,7 +109,7 @@
                 'formData'     : {
                     '_token'     : '{{csrf_token()}}'
                 },
-                'buttonText' : '选择文件',
+                'buttonText' : '选择文件AA',
                 'swf'      : '{{asset('admins')}}/uploadify/uploadify.swf',
                 'uploader' : '{{url("admin/goods/upimg")}}',
                 'onUploadSuccess' : function(file, data, response) {
