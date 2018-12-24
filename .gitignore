@@ -1,9 +1,16 @@
 /goods/.env
+<<<<<<< HEAD
 /.gitignore
 
+=======
+.gitignore
+>>>>>>> 4835a3e751921818de09fa987e2a7e8172389ac1
 /laravel-admin/.env
 /laravel-admin/.gitignore
 /laravel-admin/storage/framework/cache/
 
+<<<<<<< HEAD
 /goods/vendor/
 /laravel-admin/vendor/
+=======
+>>>>>>> 4835a3e751921818de09fa987e2a7e8172389ac1
