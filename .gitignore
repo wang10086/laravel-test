@@ -1,6 +1,12 @@
 /goods/.env
-.gitignore
+/.gitignore
 /laravel-admin/.env
 /laravel-admin/.gitignore
 /laravel-admin/storage/framework/cache/
+
+/goods/vendor/
+/laravel-admin/vendor/
+
+goods/vendor/
+laravel-admin/vendor/
 
