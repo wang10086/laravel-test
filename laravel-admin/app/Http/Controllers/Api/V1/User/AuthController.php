@@ -46,7 +46,7 @@ class AuthController extends Controller
         //判断邮箱是否注册
         $count = User::where('email', $credentials['email'])->count();
         if ($count == 0) {
-            return ajaxReturn(404, '邮箱不存在');
+            return ajaxReturn(404, '邮箱不存在a');
         }
         //创建token
         $token = JWTAuth::attempt($credentials);
