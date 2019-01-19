@@ -39,12 +39,10 @@ class ProfilerListener implements EventSubscriberInterface
     protected $parents;
 
     /**
-     * Constructor.
-     *
      * @param Profiler                     $profiler           A Profiler instance
      * @param RequestMatcherInterface|null $matcher            A RequestMatcher instance
-     * @param bool                         $onlyException      true if the profiler only collects data when an exception occurs, false otherwise
-     * @param bool                         $onlyMasterRequests true if the profiler only collects data when the request is a master request, false otherwise
+     * @param bool                         $onlyException      True if the profiler only collects data when an exception occurs, false otherwise
+     * @param bool                         $onlyMasterRequests True if the profiler only collects data when the request is a master request, false otherwise
      * @param RequestStack|null            $requestStack       A RequestStack instance
      */
     public function __construct(Profiler $profiler, RequestMatcherInterface $matcher = null, $onlyException = false, $onlyMasterRequests = false, RequestStack $requestStack = null)
@@ -53,7 +51,7 @@ class ProfilerListener implements EventSubscriberInterface
             // Prevent the deprecation notice to be triggered all the time.
             // The onKernelRequest() method fires some logic only when the
             // RequestStack instance is not provided as a dependency.
-            trigger_error('Since version 2.4, the '.__METHOD__.' method must accept a RequestStack instance to get the request instead of using the '.__CLASS__.'::onKernelRequest method that will be removed in 3.0.', E_USER_DEPRECATED);
+            @trigger_error('Since version 2.4, the '.__METHOD__.' method must accept a RequestStack instance to get the request instead of using the '.__CLASS__.'::onKernelRequest method that will be removed in 3.0.', E_USER_DEPRECATED);
         }
 
         $this->profiler = $profiler;
@@ -67,8 +65,6 @@ class ProfilerListener implements EventSubscriberInterface
 
     /**
      * Handles the onKernelException event.
-     *
-     * @param GetResponseForExceptionEvent $event A GetResponseForExceptionEvent instance
      */
     public function onKernelException(GetResponseForExceptionEvent $event)
     {
@@ -91,8 +87,6 @@ class ProfilerListener implements EventSubscriberInterface
 
     /**
      * Handles the onKernelResponse event.
-     *
-     * @param FilterResponseEvent $event A FilterResponseEvent instance
      */
     public function onKernelResponse(FilterResponseEvent $event)
     {

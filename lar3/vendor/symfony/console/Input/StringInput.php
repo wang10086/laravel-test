@@ -19,8 +19,6 @@ namespace Symfony\Component\Console\Input;
  *     $input = new StringInput('foo --bar="foobar"');
  *
  * @author Fabien Potencier <fabien@symfony.com>
- *
- * @api
  */
 class StringInput extends ArgvInput
 {
@@ -28,19 +26,15 @@ class StringInput extends ArgvInput
     const REGEX_QUOTED_STRING = '(?:"([^"\\\\]*(?:\\\\.[^"\\\\]*)*)"|\'([^\'\\\\]*(?:\\\\.[^\'\\\\]*)*)\')';
 
     /**
-     * Constructor.
-     *
-     * @param string          $input      An array of parameters from the CLI (in the argv format)
+     * @param string          $input      A string representing the parameters from the CLI
      * @param InputDefinition $definition A InputDefinition instance
      *
      * @deprecated The second argument is deprecated as it does not work (will be removed in 3.0), use 'bind' method instead
-     *
-     * @api
      */
     public function __construct($input, InputDefinition $definition = null)
     {
         if ($definition) {
-            trigger_error('The $definition argument of the '.__METHOD__.' method is deprecated and will be removed in 3.0. Set this parameter with the bind() method instead.', E_USER_DEPRECATED);
+            @trigger_error('The $definition argument of the '.__METHOD__.' method is deprecated and will be removed in 3.0. Set this parameter with the bind() method instead.', E_USER_DEPRECATED);
         }
 
         parent::__construct(array(), null);
