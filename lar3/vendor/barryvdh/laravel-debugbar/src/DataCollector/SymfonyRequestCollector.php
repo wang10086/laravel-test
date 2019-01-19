@@ -48,14 +48,14 @@ class SymfonyRequestCollector extends DataCollector implements DataCollectorInte
      */
     public function getWidgets()
     {
-        return array(
-            "request" => array(
+        return [
+            "request" => [
                 "icon" => "tags",
                 "widget" => "PhpDebugBar.Widgets.VariableListWidget",
                 "map" => "request",
                 "default" => "{}"
-            )
-        );
+            ]
+        ];
     }
 
     /**
@@ -67,7 +67,7 @@ class SymfonyRequestCollector extends DataCollector implements DataCollectorInte
         $response = $this->response;
 
         $responseHeaders = $response->headers->all();
-        $cookies = array();
+        $cookies = [];
         foreach ($response->headers->getCookies() as $cookie) {
             $cookies[] = $this->getCookieHeader(
                 $cookie->getName(),
@@ -85,7 +85,7 @@ class SymfonyRequestCollector extends DataCollector implements DataCollectorInte
 
         $statusCode = $response->getStatusCode();
 
-        $data = array(
+        $data = [
             'format' => $request->getRequestFormat(),
             'content_type' => $response->headers->get('Content-Type') ? $response->headers->get(
                 'Content-Type'
@@ -99,14 +99,21 @@ class SymfonyRequestCollector extends DataCollector implements DataCollectorInte
             'request_cookies' => $request->cookies->all(),
             'response_headers' => $responseHeaders,
             'path_info' => $request->getPathInfo(),
-        );
+        ];
 
         if ($this->session) {
-            $sessionAttributes = array();
+            $sessionAttributes = [];
             foreach ($this->session->all() as $key => $value) {
                 $sessionAttributes[$key] = $value;
             }
             $data['session_attributes'] = $sessionAttributes;
+        }
+
+        foreach ($data['request_server'] as $key => $value) {
+            if (str_is('*_KEY', $key) || str_is('*_PASSWORD', $key)
+                    || str_is('*_SECRET', $key) || str_is('*_PW', $key)) {
+                $data['request_server'][$key] = '******';
+            }
         }
 
         if (isset($data['request_headers']['php-auth-pw'])) {
