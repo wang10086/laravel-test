@@ -73,7 +73,6 @@ $api->version(['v1','v2'], function ($api) {
     /**
      * 私有接口 必须登录
      */
-
     //必须登录
     $api->group(['namespace'=>'App\Http\Controllers\Api\V1', 'middleware'=>['jwt.auth','jwt.refresh']], function ($api) {
         //home 模块下的路由
