@@ -110,6 +110,7 @@ class RoleController extends Controller
     public function permission_role_update(Request $request, PermissionRole $permissionRole)
     {
         $data=$request->except('_token');
+        P($data);
         //清空此用户原来的权限
         $map=[
             'role_id'=>$data['id']

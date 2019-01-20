@@ -73,7 +73,7 @@
                             <tr>
                                 <th></th>
                                 <td>
-                                    <input class="btn btn-success" type="submit" value="添加">
+                                    <button class="btn btn-success" onclick="alerterror()" type="button" value="aa添加">aaaa</button>
                                 </td>
                             </tr>
                         </table>
@@ -137,6 +137,12 @@
             $("input[name='name']").val('');
             $("input[name='display_name']").val('');
             $('#bjy-add').modal('show');
+        }
+
+        function alerterror() {
+            console.log('aaaa');
+            $('#bjy-form').submit();
+            return false;
         }
 
         // 修改角色
